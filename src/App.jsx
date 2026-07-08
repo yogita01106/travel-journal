@@ -1,0 +1,24 @@
+import Header from "./assets/Header"
+import Entry from "./assets/Entry"
+import data from "./assets/data"
+
+export default function App() {
+    
+    const entryElements = data.map((entry) => {
+        return (
+            <Entry
+                key={entry.id}
+                entry={entry}
+            />
+        )
+    })
+    
+    return (
+        <>
+            <Header />
+            <main className="container">
+                {entryElements}
+            </main>
+        </>
+    )
+}
